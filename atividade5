@@ -6,7 +6,7 @@
 int main() {
     setlocale(LC_ALL, "portuguese");
     char nome[200];
-    int opcao, quantidade;
+    int opcao, quantidade, total, counter;
     float precoUnitario,precoFinal;
 
     printf("|-----------Menu------------|\n");
@@ -19,30 +19,33 @@ int main() {
     scanf("%d", &opcao);
 
     system("cls || clear");
-
-    switch (opcao) {
-    case 1 :
-         printf("Digite o nome do produto: ");
-         gets(produto);
-         
-         printf("Digite o preço do seu produto: ");
-         scanf("%f", &precoUnitario);
-         
-         printf("Digite a quantidade do seu produto: ");
-         scanf("%d", &quantidade);
-         
-         precoFinal = precoUnitario * quantidade;
-         
-       break;
-    case 2 :
-       printf("Nomes dos produtos desejados: %c \n", nome[i]);
-       printf("Quantidades desejadas: %d \n", quantidade[i]);
-       printf("Total a pagar: R$%f \n", precofinal[i]);
-       break;
-       
-       default:
-        printf("Opção invalida");
-        break;
+	do{
+	    if(opcao =1){
+	        printf("Digite o nome do produto: ");
+	        gets(produto);
+	         
+	        printf("Digite o preço do seu produto: ");
+	        scanf("%f", &precoUnitario);
+	         
+	        printf("Digite a quantidade do seu produto: ");
+	        scanf("%d", &quantidade);
+	         
+	        precoFinal = precoUnitario * quantidade;
+	        total += preciFinal;
+			counter++;    
+	    	
+		}
+		else{
+			
+	    case 2 :
+	       printf("Nomes dos produtos desejados: %c \n", nome[counter]);
+	       printf("Quantidades desejadas: %d \n", quantidade[counter]);
+	       printf("Total a pagar: R$%f \n", precofinal[counter]);
+	       break;
+	       
+		}
+	}while(opcao=1)
+	
 
     return 0;
 }
