@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    char nome[200];
+    int opcao, quantidade;
+    float precoUnitario,precoFinal;
+
+    printf("|-----------Menu------------|\n");
+    printf("|codigo | alternatinas      |\n");
+    printf("|1      | Nova venda        |\n");
+    printf("|2      | exibir compras    |\n");
+    printf("|-----------Fim-------------|\n");
+    
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
+
+    system("cls || clear");
+
+    switch (opcao) {
+    case 1 :
+         printf("Digite o nome do produto: ");
+         gets(produto);
+         
+         printf("Digite o preço do seu produto: ");
+         scanf("%f", &precoUnitario);
+         
+         printf("Digite a quantidade do seu produto: ");
+         scanf("%d", &quantidade);
+         
+         precoFinal = precoUnitario * quantidade;
+         
+       break;
+    case 2 :
+       printf("Nomes dos produtos desejados: %c \n", nome[i]);
+       printf("Quantidades desejadas: %d \n", quantidade[i]);
+       printf("Total a pagar: R$%f \n", precofinal[i]);
+       break;
+       
+       default:
+        printf("Opção invalida");
+        break;
+
+    return 0;
+}
