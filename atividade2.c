@@ -12,7 +12,7 @@ int main (){
     for(i=0; i<5; i++){
         fflush(stdin);
         printf("nome: ");
-        gets(&nomes[i]);
+        gets(nomes[i]);
 		for(j=0; j<3; j++){
         	printf("nota: ");
         	scanf("%f", &notas[i][j]);
@@ -26,9 +26,14 @@ int main (){
 	for(i=0;i<5;i++){
 		printf("nome: %s\n", nomes[i]);
 		for(j=0;j<3;j++){	
-			printf("nota %i�: %.2f\n", i, notas[i][j]);
+			printf("nota %iª: %.2f\n", i+1, notas[i][j]);
 		}
+		
 		printf("media: %.2f\n", medias[i]);
+		if(media>=7){
+			printf("Situação: aprovado");
+		}
+		else printf("situação: reprovado");
 	
 	}
 	return 0;
